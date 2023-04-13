@@ -32,7 +32,7 @@ def decode_char(string)
 end
 
 def decode_word(word)
-  word.split(/ /).map { |letter| decode_morse letter }.join
+  word.split(/ /).map { |letter| decode_char letter }.join
 end
 
 def decode_sentence(sentence)
@@ -41,5 +41,5 @@ end
 
 puts decode_char('.-')
 puts decode_word('-- -.--')
-puts decode('-- -.--   -. .- -- .')
-puts decode('.- -... --- -..- ..-. ..- .-.. .-.. --- ..-. .-. ..- -... .. . ...')
+puts decode_sentence('-- -.--   -. .- -- .')
+puts decode_sentence('.- -... --- -..- ..-. ..- .-.. .-.. --- ..-. .-. ..- -... .. . ...')
